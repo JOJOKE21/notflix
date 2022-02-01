@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +33,87 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+*{
+  background-color: black;
+}
+.movienames{
+  display: flex;
+  flex-wrap: nowrap;
+
+}
+
+.tvshows{
+  display: flex;
+  flex-wrap: nowrap;
+
+}
+
+.navBar{
+position: fixed;
+background-color: black;
+padding: 10px;
+width: fit-content;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+color: white;
+z-index: 10;
+}
+
+.nodec{
+  display: block;
+  justify-content: space-between;
+  text-decoration: none;
+  font-size:20px;
+  color: white;
+}
+
+.tab{
+  position: absolute;
+  display: flex;
+  left: 260px;
+  top: 50px;
+  margin-right: 10px;
+  padding: 10px;
+  color: white;
+}
+
+.tab2{
+  position: absolute;
+  display: flex;
+  left: 260px;
+  top: 600px;
+  margin-right: 10px;
+  padding: 10px;
+  color: white;
+}
+
+
+.photo{
+  position: relative;
+  left: 250px;
+  top: 150px;
+  width: 250px;
+  margin-left: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.photo2{
+  position: relative;
+  left: 250px;
+  top: 300px;
+  width: 250px;
+  margin-left: 10px;
+  padding: 10px;
+cursor: pointer;
+}
+
+.photo img{
+  width: 100%;
+}
+.photo2 img{
+  width: 100%;
 }
