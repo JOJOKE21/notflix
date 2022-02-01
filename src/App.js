@@ -4,6 +4,10 @@ import Newmovies from './componets/newmovies/newmovies.js';
 import NavBar from './componets/NavBar/NavBar';
 import TopMovies from './componets/movie/movie.js';
 import Discover from './componets/Discover/discover.js'
+import TrendingDayM from './componets/trending/trendingdayM.js';
+import TrendingWeekM from './componets/trending/trendingweekM.js'
+import TrendingDayT from './componets/trending/trendingdayT.js'
+import TrendingWeekT from './componets/trending/trendingweekT.js'
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import './App.css';
 import TopTv from './componets/tv/tv.js';
@@ -48,6 +52,10 @@ const[movies,setMovies]= useState([])
       <Route path='/Tv' element={<TopTv/>}>
         </Route>
         <Route path='/Discover' element={<Discover/>}>
+        </Route>
+        <Route path='/TrendingMovie' element={<><TrendingDayM/><TrendingWeekM/></>}>
+        </Route>
+        <Route path='/TrendingTv' element={<><TrendingDayT/><TrendingWeekT/></>}>
         </Route>
 
       </Routes>

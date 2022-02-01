@@ -1,13 +1,13 @@
 import {useState, useEffect} from 'react';
-import { fetchNewMovies } from './../NetworkConnections/NetworkConnections.js'
-import './newmovies.css'
+import { fetchTrendingWeekT } from '../NetworkConnections/NetworkConnections.js'
 
-export default function Newmovies() {
+
+export default function TrendingWeekT() {
 
     const[movie,setMovie]= useState([])
     
       useEffect(() => {
-        fetchNewMovies()
+        fetchTrendingWeekT()
           .then(res =>{
            setMovie(res.results);
           })
@@ -17,7 +17,7 @@ export default function Newmovies() {
     
     console.log(movie)
       return <div className='tvshows'>
-          <div className='tab2'><h1>Popular Tv Shows Right Now</h1>
+          <div className='tab2'><h1>Trending Tv Shows This Week</h1>
           </div>
           {movie.map(movie=> <div>
               {console.log(movie)}

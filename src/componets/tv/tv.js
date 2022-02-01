@@ -4,25 +4,25 @@ import './tv.css'
 
 export default function TopTv() {
 
-    const[movie,setMovie]= useState([])
+    const[tv,setTv]= useState([])
     
       useEffect(() => {
         fetchTvDetals()
           .then(res =>{
-           setMovie(res.results);
+           setTv(res.results);
           })
       }, [])
     
     
     
-    console.log(movie)
+    console.log(tv)
       return <div className='tvshows'>
           <div className='tab'><h1>Top rated tv shows</h1>
           </div>
-          {movie.map(movie=> <div>
-              {console.log(movie)}
+          {tv.map(tv=> <div>
+              {console.log(tv)}
               <div className='photo'>
-              <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={`movie poster of ${movie.title}`}/>
+              <img src={`https://image.tmdb.org/t/p/w500${tv.poster_path}`} alt={`movie poster of ${tv.title}`}/>
               </div>
               </div>)}
       </div>

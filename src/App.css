@@ -43,7 +43,11 @@
   flex-wrap: nowrap;
 
 }
-
+.text{
+  color: white;
+  display: flex;
+  justify-content: center;
+}
 .tvshows{
   display: flex;
   flex-wrap: nowrap;

@@ -18,7 +18,7 @@ export default function Movienames() {
     
     console.log(movies)
       return <div className='movienames'>
-          <div className='tab'><h1>Popular Movies</h1>
+          <div className='tab'><h1>Popular Movies Right Now</h1>
           </div>
           {movies.map(movie=> <div>
               {console.log(movie)}

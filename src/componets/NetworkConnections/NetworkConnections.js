@@ -20,7 +20,25 @@ export const fetchTopMovies = () => {
     .then(res => res.json())
 }
 
-export const fetchGeners = () => {
-    return fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apikey}&language=en-US`)
-    .then(res => res)
+export const fetchTrendingDayM = () => {
+    return fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=${apikey}`)
+    .then(res=> res.json())
 }
+
+export const fetchTrendingWeekM = () => {
+    return fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${apikey}`)
+    .then(res=> res.json())
+}
+
+
+export const fetchTrendingDayT = () => {
+    return fetch(`https://api.themoviedb.org/3/trending/tv/day?api_key=${apikey}`)
+    .then(res=> res.json())
+}
+
+
+export const fetchTrendingWeekT = () => {
+    return fetch(`https://api.themoviedb.org/3/trending/tv/week?api_key=${apikey}`)
+    .then(res=> res.json())
+} 
+

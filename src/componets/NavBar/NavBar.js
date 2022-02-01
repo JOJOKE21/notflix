@@ -7,7 +7,8 @@ export default function NavBar() {
         <ul>
         <h1 >Seacrch</h1>
         <Link to='/' className="nodec">Home</Link>
-        <h1>New and Trending</h1>
+        <Link to='/TrendingMovie' className="nodec">Trending In Movie</Link>
+        <Link to='/TrendingTv' className="nodec">Trending In Tv</Link>
         <Link to='/Movies' className="nodec">Movies</Link>
         <Link to='/Tv' className="nodec">Tv</Link>
         <Link to='/Discover' className="nodec">Discover</Link>
