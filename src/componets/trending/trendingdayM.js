@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import { fetchTrendingDayM } from '../NetworkConnections/NetworkConnections.js'
+import { fetchMoviesData } from '../NetworkConnections/NetworkConnections.js'
 import './trending.css'
 
 export default function TrendingDayM() {
@@ -7,7 +7,7 @@ export default function TrendingDayM() {
     const[movie,setMovie]= useState([])
     
       useEffect(() => {
-        fetchTrendingDayM()
+        fetchMoviesData(`/trending/movie/day`)
           .then(res =>{
            setMovie(res.results);
           })

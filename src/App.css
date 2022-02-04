@@ -35,7 +35,11 @@
   }
 }
 
-*{
+.App{
+  display: flex;
+  width: 100%;
+}
+body{
   background-color: black;
 }
 .movienames{
@@ -48,6 +52,17 @@
   display: flex;
   justify-content: center;
 }
+
+.text2{
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+}
+.text3{
+  color: white;
+}
+
 .tvshows{
   display: flex;
   flex-wrap: nowrap;
@@ -55,16 +70,14 @@
 }
 
 .navBar{
-position: fixed;
 background-color: black;
-padding: 10px;
-width: fit-content;
+margin: 50px;
+width: 600px;
 height: 100%;
 display: flex;
 flex-direction: column;
 justify-content: center;
 color: white;
-z-index: 10;
 }
 
 .nodec{
@@ -73,14 +86,16 @@ z-index: 10;
   text-decoration: none;
   font-size:20px;
   color: white;
+  padding: 30px;
+  /* margin: 10px; */
 }
 
 .tab{
   position: absolute;
   display: flex;
-  left: 260px;
+  left: 300px;
   top: 50px;
-  margin-right: 10px;
+ 
   padding: 10px;
   color: white;
 }
@@ -88,36 +103,86 @@ z-index: 10;
 .tab2{
   position: absolute;
   display: flex;
-  left: 260px;
+  left: 300px;
   top: 600px;
-  margin-right: 10px;
+
   padding: 10px;
   color: white;
 }
 
 
-.photo{
-  position: relative;
-  left: 250px;
-  top: 150px;
-  width: 250px;
-  margin-left: 10px;
-  padding: 10px;
-  cursor: pointer;
-}
-.photo2{
-  position: relative;
-  left: 250px;
-  top: 300px;
-  width: 250px;
-  margin-left: 10px;
-  padding: 10px;
-cursor: pointer;
-}
-
-.photo img{
+.movies{
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
+
+
+
+.photo2{
+  width: 250px;
+  padding: 10px;
+}
+.names{
+  color:white
+}
+.singlephoto{
+  width: 300px;
+}
+
+
 .photo2 img{
   width: 100%;
 }
+
+.moviegenre{
+  position:absolute;
+  right: 500px;
+  display: block;
+  width: fit-content;
+}
+
+.tvgenre{
+  display: block;
+  position: absolute;
+  left: 500px;
+  width: fit-content;
+}
+
+.textsingle{
+  color: white;
+  position: relative;
+  left: 1300px;
+  top: 75px;
+  width: fit-content;
+font-size: 50px;
+}
+
+.detailsingle{
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.detailsingleO{
+  position: relative;
+  left: 700px;
+  width: 700px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  word-wrap: break-word;
+  font-size: larger;
+}
+
+.video{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 400px;
+  left: 600px;
+  width: 600px;
+  height: 500px;
+  
+}
+

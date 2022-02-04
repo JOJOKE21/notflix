@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import { fetchTvDetals } from './../NetworkConnections/NetworkConnections.js'
+import { fetchMoviesData } from './../NetworkConnections/NetworkConnections.js'
 import './tv.css'
 
 export default function TopTv() {
@@ -7,7 +7,7 @@ export default function TopTv() {
     const[tv,setTv]= useState([])
     
       useEffect(() => {
-        fetchTvDetals()
+        fetchMoviesData(`/tv/top_rated`)
           .then(res =>{
            setTv(res.results);
           })

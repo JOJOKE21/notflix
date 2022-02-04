@@ -3,9 +3,8 @@ import {BrowserRouter , Link} from "react-router-dom"
 export default function NavBar() {
     return (
         <nav className="navBar">
-        <div>
         <ul>
-        <h1 >Seacrch</h1>
+        <h1 className="nodec">Seacrch</h1>
         <Link to='/' className="nodec">Home</Link>
         <Link to='/TrendingMovie' className="nodec">Trending In Movie</Link>
         <Link to='/TrendingTv' className="nodec">Trending In Tv</Link>
@@ -13,7 +12,6 @@ export default function NavBar() {
         <Link to='/Tv' className="nodec">Tv</Link>
         <Link to='/Discover' className="nodec">Discover</Link>
         </ul>    
-        </div>
         </nav>
         
     )

@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import { fetchTrendingWeekT } from '../NetworkConnections/NetworkConnections.js'
+import { fetchMoviesData } from '../NetworkConnections/NetworkConnections.js'
 
 
 export default function TrendingWeekT() {
@@ -7,7 +7,7 @@ export default function TrendingWeekT() {
     const[movie,setMovie]= useState([])
     
       useEffect(() => {
-        fetchTrendingWeekT()
+        fetchMoviesData(`/trending/tv/week`)
           .then(res =>{
            setMovie(res.results);
           })
