@@ -1,10 +1,10 @@
-import TvCard from "./tvcard"
-
-export default function Tvlist({tvs, title}){
-    return <div>
-        <h1>{title}</h1>
-        <div className="names">
-            {tvs.map(tv=> <TvCard tv={tv}/>)}
+import TvCard from "./tvcard";
+export default function Tvlist({tv,title}){
+    tv = tv.slice(0,5)
+    return <>
+        <h1 className="title">{title}</h1>
+        <div className="movies">
+            {tv.map(tv => <TvCard tv={tv}/>)}
         </div>
-    </div>
+    </>
 }

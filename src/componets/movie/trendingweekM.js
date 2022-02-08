@@ -1,24 +1,21 @@
-import { useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import { fetchMoviesData } from '../NetworkConnections/NetworkConnections.js'
 import MovieList from './movielist.js'
 
+export default function TrendingWeekM() {
 
-export default function Movies() {
-
-    const[movies,setMovies]= useState([]);
-
+    const[movies,setMovies]= useState([])
+    
       useEffect(() => {
-        fetchMoviesData(`/movie/popular`, `&page=1`)
+        fetchMoviesData(`/trending/movie/week`)
           .then(res =>{
            setMovies(res.results);
-          });
+          })
       }, [])
     
     
     
-    
       return <div className='move'>
-      <MovieList title="Popular Movies Right Now" movies={movies}/>
+      <MovieList title="Trending Movies This Week" movies={movies}/>
       </div>
-
     }

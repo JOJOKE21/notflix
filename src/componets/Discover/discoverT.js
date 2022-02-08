@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './discover.css'
+
 
 const apikey = process.env.REACT_APP_API_KEY
 

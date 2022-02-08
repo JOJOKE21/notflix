@@ -37,10 +37,29 @@
 
 .App{
   display: flex;
-  width: 100%;
+  flex-wrap: wrap;
 }
+.nav{
+  display: flex;
+  width:max-content;
+  height: fit-content;
+  background-color: pink;
+}
+
+.nodec{
+display: block;
+justify-content: space-evenly;
+padding: 50px;
+flex-wrap: nowrap;
+text-decoration: none;
+font-size: 30px;
+color: white;
+text-shadow: 2px 2px blue;
+}
+
+
 body{
-  background-color: black;
+  background-color: hotpink;
 }
 .movienames{
   display: flex;
@@ -63,32 +82,7 @@ body{
   color: white;
 }
 
-.tvshows{
-  display: flex;
-  flex-wrap: nowrap;
 
-}
-
-.navBar{
-background-color: black;
-margin: 50px;
-width: 600px;
-height: 100%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-color: white;
-}
-
-.nodec{
-  display: block;
-  justify-content: space-between;
-  text-decoration: none;
-  font-size:20px;
-  color: white;
-  padding: 30px;
-  /* margin: 10px; */
-}
 
 .tab{
   position: absolute;
@@ -105,68 +99,72 @@ color: white;
   display: flex;
   left: 300px;
   top: 600px;
-
   padding: 10px;
   color: white;
 }
 
 
+
+
+.title{
+  color: white;
+  flex-wrap: nowrap;
+  text-shadow: 2px 2px blue;
+}
+
+
 .movies{
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
-
-
-.photo2{
-  width: 250px;
-  padding: 10px;
-}
-.names{
-  color:white
-}
-.singlephoto{
+.movies img{
   width: 300px;
+ margin: 10px;
 }
 
-
-.photo2 img{
-  width: 100%;
+.tvs{
+  display: flex;
 }
+
+.tvs img{
+  width: 300px;
+ margin: 10px;
+}
+
 
 .moviegenre{
   position:absolute;
   right: 500px;
   display: block;
   width: fit-content;
+  top: 200px;
 }
 
 .tvgenre{
   display: block;
   position: absolute;
   left: 500px;
+  top: 200px;
   width: fit-content;
 }
 
-.textsingle{
-  color: white;
+.singletext{
   position: relative;
-  left: 1300px;
-  top: 75px;
+  left: 300px;
+  display: flex;
+  color: white;
+justify-content: flex-end;
+  
   width: fit-content;
 font-size: 50px;
 }
 
-.detailsingle{
-  display: flex;
-  justify-content: center;
-  color: white;
-}
+
 
 .detailsingleO{
   position: relative;
   left: 700px;
+  bottom: 200px;
   width: 700px;
   display: flex;
   justify-content: center;
@@ -177,12 +175,53 @@ font-size: 50px;
 
 .video{
   display: flex;
-  justify-content: center;
-  position: relative;
-  bottom: 400px;
-  left: 600px;
-  width: 600px;
+justify-content: center;
+  position: absolute;
+  top:150px;
+  left: 300px;
+  width: 800px;
   height: 500px;
-  
+  margin: 10px;
 }
 
+.single{
+  position: relative;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  bottom: 75px;
+  left: 210px;
+
+}
+
+.single2{
+  position: relative;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  bottom: 40px;
+  left: 125px;
+
+}
+
+.singlein{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  right: 100px;
+}
+
+.singlein2{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  right: 100px;
+  top: 20px;
+}
+
+.search{
+  width: 100%;
+  text-align: center;
+}

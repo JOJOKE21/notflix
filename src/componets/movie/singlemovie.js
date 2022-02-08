@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom'
-import MoiveCard from '../movie/moviecard.js';
+import MoiveCard from './moviecard.js'
 import { fetchMoviesData } from './../NetworkConnections/NetworkConnections.js'
 import { useState, useEffect } from 'react';
 
-export default function Singletv(props) {
+export default function SingleMovie(props) {
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
     useEffect(() => {

@@ -12,19 +12,37 @@ export default function MoiveCard({movie, single}){
              });
         
     }, [movie]);
-    return movie && 
-    <Link to={`/movie/${movie.id}`}>
-    <div key={movie.id}>
-        <img className="singlephoto" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={`movie poster of ${movie.title}`}/>
+    if(!movie) return null;
+
+    if(!single){
+        return <Link to={`/movie/${movie.id}`}>
+        <div key={movie.id}>
+        <img  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={`movie poster of ${movie.title}`}/>
+        </div>
+    </Link>
+    } else {
+        return <div key={movie.id}>
+        <img  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={`movie poster of ${movie.title}`}/>
         {single &&  <>
-        <h1 className="textsingle">{movie.title}</h1>
-        <p className="detailsingle">{movie.release_date}</p>
-        <h3 className="detailsingle">{movie.tagline}</h3>
-        <p className="detailsingleO">{movie.overview}</p>
+        <div className="video">
+        <h1 className="singletext">{movie.title}</h1>
+        </div><div>
+           <h2 className="singlein">Release date:</h2>
+        </div><div> 
+          <h2 className="singlein2">Tag Line:</h2>
+        </div>
+        <p className="single">{movie.release_date}</p>
+        <h3 className="single2">{movie.tagline}</h3>
+        <p className="detailsingleO"><div>
+            <h2 className="singlein">Overview:</h2>
+            </div>{movie.overview}</p>
         <div className="video">
         {videos.length && <Videos id={videos[0].key}/>}
         </div>
         </>}
     </div>
-</Link>
+    }
+    
+        
+
 }

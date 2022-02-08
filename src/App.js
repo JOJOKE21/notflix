@@ -1,38 +1,38 @@
 import React from 'react';
 import Movies from './componets/movie/movies.js'
-import Movienames from './componets/MovieNames/movienames.js';
-import Newmovies from './componets/newmovies/populartv.js';
 import NavBar from './componets/NavBar/NavBar';
-import TopMovies from './componets/movie/movies.js';
+import TopRatedMovies from './componets/movie/topratedM.js';
+import Tvs from './componets/tv/tv.js';
 import DiscoverM from './componets/Discover/discoverM.js'
 import DiscoverT from './componets/Discover/discoverT.js'
-import TrendingDayM from './componets/trending/trendingdayM.js';
-import TrendingWeekM from './componets/trending/trendingweekM.js'
-import TrendingDayT from './componets/trending/trendingdayT.js'
-import TrendingWeekT from './componets/trending/trendingweekT.js'
-import Singlemovie from './componets/singlemovie/singlemovie.js'
-import Singletv from './componets/singlemovie/singlemovie.js';
+import TrendingDayM from './componets/movie/trendingdayM.js';
+import TrendingWeekM from './componets/movie/trendingweekM.js';
+import TrendingDayT from './componets/tv/trendingdayT.js'
+import TrendingWeekT from './componets/tv/trendingweekT.js'
+import SingleMovie from './componets/movie/singlemovie.js'
+import SingleTv from './componets/tv/singletv.js'
+import Search from './componets/Search/search.js';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import './App.css';
-import TopTv from './componets/tv/tv.js';
+import TopRatedTv from './componets/tv/topratedT.js'
 
 
 function App() {
 
   return (
-    <div className="App">
+    <div className='App'>
       <Router>
       <NavBar/>
       <Routes>
-      <Route path='/' element={<Movies/>}>
+      <Route path='/Search' element={<Search/>}>
       </Route>
-      <Route path='/movie/popular/:id' element={<><Movienames/><Newmovies/></>}>
+      <Route path='/' element={<><Movies/><Tvs/></>}>
       </Route>
 
-      <Route path='/Movies' element={<><Movienames/><TopMovies/></>}>
+      <Route path='/Movies' element={<><TopRatedMovies/><Movies/></>}>
         </Route>
       
-      <Route path='/Tv' element={<><TopTv/><Newmovies/></>}>
+      <Route path='/Tv' element={<><TopRatedTv/><Tvs/></>}>
         </Route>
        
         <Route path='/Discover' element={<><DiscoverM/><DiscoverT/></>}>
@@ -44,10 +44,10 @@ function App() {
         <Route path='/TrendingTv' element={<><TrendingDayT/><TrendingWeekT/></>}>
         </Route>
 
-        <Route path='/movie/:id' element={<Singlemovie/>}>
+        <Route path='/movie/:id' element={<SingleMovie/>}>
         </Route>
 
-        <Route path='/tv/:id' element={<Singletv/>}>
+        <Route path='/tv/:id' element={<SingleTv/>}>
         </Route>
 
       </Routes>
