@@ -10,7 +10,6 @@ export default function TvCard({tv, single}){
                 console.log('videos', res);
                 setVideos(res.results)
              });
-        console.log(videos.title)
     }, [tv]);
     if(!tv) return null;
 

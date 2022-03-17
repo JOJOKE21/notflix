@@ -20,19 +20,20 @@ export default function Search() {
     }, [])
 
     const onChange = e => {
+        e.preventDefault();
         let movies = e.target.value
         console.log(movies)
         fetchMoviesData(`/search/movie`, `&language=en-US&query=${movies}`)
             .then(res => {
                 console.log(res.results)
-                setMovies(res.results)
+                setMovies(res.results || [])
             })
             let tv = e.target.value
             console.log(movies)
             fetchMoviesData(`/search/tv`, `&language=en-US&query=${tv}`)
                 .then(res => {
                     console.log(res.results)
-                    setTv(res.results)
+                    setTv(res.results || [])
                 })
            
     }

@@ -38,10 +38,11 @@
 .App{
   display: flex;
   flex-wrap: wrap;
+
 }
 .nav{
   display: flex;
-  width:max-content;
+  width: 100%;
   height: fit-content;
   background-color: pink;
 }
@@ -55,6 +56,8 @@ text-decoration: none;
 font-size: 30px;
 color: white;
 text-shadow: 2px 2px blue;
+white-space: nowrap;
+width: 100%;
 }
 
 
@@ -118,7 +121,7 @@ body{
 }
 
 .movies img{
-  width: 300px;
+  width: 270px;
  margin: 10px;
 }
 
@@ -127,7 +130,7 @@ body{
 }
 
 .tvs img{
-  width: 300px;
+  width: 270px;
  margin: 10px;
 }
 
