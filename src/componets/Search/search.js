@@ -4,7 +4,7 @@ import MovieList from "../movie/movielist";
 import Tvlist from "../tv/tvlist";
 
 
-const apikey = process.env.REACT_APP_API_KEY
+const apikey = bed48dd19daf5f0b7bfc95478a74372b
 
 export default function Search() {
     const[search,setSearch]= useState([]);
