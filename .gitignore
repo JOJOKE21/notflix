@@ -23,5 +23,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+#keys/tokens
+.env
+
 # Local Netlify folder
 .netlify
