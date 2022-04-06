@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 
-const apikey = bed48dd19daf5f0b7bfc95478a74372b
+const apikey = process.env.REACT_APP_API_KEY
 
 export default function GenreT() {
 
